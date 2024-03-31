@@ -6,10 +6,12 @@ type Student struct {
 	Score int
 }
 
-func (s *Student) NewStudent(name string, age int, score int) {
-	s.Name = name
-	s.Age = age
-	s.Score = score
+func NewStudent(name string, age int, score int) *Student {
+	return &Student{
+		Name:  name,
+		Age:   age,
+		Score: score,
+	}
 }
 
 func (s *Student) GetStudentInfo() string {
