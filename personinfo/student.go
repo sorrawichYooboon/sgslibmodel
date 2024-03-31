@@ -33,3 +33,11 @@ func (s *Student) GetStudentGrade() string {
 		return "F"
 	}
 }
+
+func (s *Student) fake(score int) {
+	fmt.Println("Fake score: ", score)
+}
+
+func fakeTwo() {
+	fmt.Println("Fake two")
+}
