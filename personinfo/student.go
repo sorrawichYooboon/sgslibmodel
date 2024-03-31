@@ -1,5 +1,7 @@
 package personinfo
 
+import "fmt"
+
 type Student struct {
 	Name  string
 	Age   int
@@ -15,7 +17,7 @@ func NewStudent(name string, age int, score int) *Student {
 }
 
 func (s *Student) GetStudentInfo() string {
-	return s.Name + " is " + string(s.Age) + " years old and has a score of " + string(s.Score)
+	return fmt.Sprintf("Name: %s, Age: %d, Score: %d, Grade: %s", s.Name, s.Age, s.Score, s.GetStudentGrade())
 }
 
 func (s *Student) GetStudentGrade() string {
